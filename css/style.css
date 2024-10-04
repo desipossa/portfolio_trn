@@ -1,0 +1,65 @@
+#header h1 {
+    position: fixed;
+    top: 80px;
+    left: 120px;
+    z-index: 999;
+}
+
+#header .gnb {
+    position: fixed;
+    top: 50%;
+    right: 120px;
+    transform: translate(0, -50%);
+    z-index: 999;
+}
+
+#header .gnb li a {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 24px;
+    font-size: 0;
+}
+
+#header .gnb li a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 20px;
+    height: 1px;
+    border-radius: 50%;
+    background: #333;
+
+    transition: 0.4s;
+}
+
+#header .gnb li.on a::before {
+    width: 40px;
+}
+
+.section {
+    position: relative;
+}
+
+.section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: #333;
+    clip-path: polygon(0 0, 100% 16%, 100% 78%, 0% 100%);
+}
+
+.section.on::before {
+    width: 50%;
+    transition: 0.4s 0.7s;
+}
+
+.section.on {
+    font-size: 100px;
+    color: tomato;
+    transition: 0.4s 0.7s;
+}
