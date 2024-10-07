@@ -37,9 +37,10 @@ $(function () {
         $('#header .menu').removeClass('on');
     });
 
+
+    $('#header .cover').on('wheel', function (e) {
+        e.stopPropagation();
+    });
+
 });
 
-
-$(function () {
-
-})
