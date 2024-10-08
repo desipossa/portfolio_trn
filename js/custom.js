@@ -8,12 +8,12 @@ $(function () {
         .from('.intro p', { x: -1000, opacity: 0 })
         .from('.intro .star', { y: 200, opacity: 0, rotate: 720 })
 
-    $('#portfolio').fullpage({
+    $('#content').fullpage({
         anchors: ['intro', 'pf01', 'pf02', 'pf03', 'profile'],
         onLeave: function (idx, nidx, dir) {
             console.log(idx, nidx, dir);
             $('#header .gnb li').eq(nidx - 1).addClass('on').siblings().removeClass('on');
-            //$('.section').eq(nidx - 1).addClass('on').siblings().removeClass('on');
+            $('.section').eq(nidx - 1).addClass('on').siblings().removeClass('on');
 
             if (nidx == 1) {
                 tl.restart();
